@@ -1,0 +1,22 @@
+<div style="text-align: center;">
+    <div *ngIf="!isLoggedIn; else submitReviewForm">
+        <p>Log in to write and submit your review</p>
+    </div>
+    
+    <ng-template #submitReviewForm>
+        <form style="text-align: center; display: inline-block;" name="submitForm" (ngSubmit)="onSubmit()">
+            <fieldset>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Your review</span>
+                    </div>
+                    <textarea class="form-control" id="reviewContent" cols="40" rows="5" aria-label="Your review"></textarea>
+                  </div>
+            </fieldset>
+            <fieldset>
+                <app-rating [rating]='this.note' (ratingClick)='ratingComponentClick($event)'></app-rating>
+            </fieldset>
+            <input class="btn btn-dark btn-sm" type="submit" value="Submit" />
+        </form>
+    </ng-template>
+</div>

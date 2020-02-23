@@ -1,0 +1,23 @@
+.loginButton {
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    height: 40px;
+    line-height: 9px;
+    color: #000000;
+    font-family: Open Sans;
+    width: 100px;
+    font-size: 16px;
+
+    background-color: #FFFFFF;
+    border: solid #747781 3px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+ }
+ 
+ .loginButton:hover {
+    background: rgb(103, 103, 104);
+
+    text-decoration: none;
+ }

@@ -1,0 +1,6 @@
+<div id="typeahead-div">
+    <input id="typeahead-input" type="text" class="form-control" [ngbTypeahead]="search" />
+    <button id="show-button" type="button" class="btn btn-success btn-sm" (click)="canILoadIt();">Go</button>
+    <button id="clear-button" type="button" class="btn btn-danger btn-sm" (click)="clear();">Reset</button>
+</div>
+<app-restaurant-list *ngIf="canBeLoaded"></app-restaurant-list>

@@ -1,0 +1,17 @@
+<h2 mat-dialog-title style="text-align: center;">User Information</h2>
+<hr>
+<mat-dialog-content>
+    <div *ngIf="user">
+        <p>
+            <strong>Name:</strong> {{user.name}}<br />
+            <strong>Username:</strong> {{user.username}}<br />
+            <strong>Email:</strong> {{user.email}}<br />
+            <strong>Logged in as:</strong> {{user.role}}<br />
+        </p>
+        <hr>
+        <div style="text-align: center;">
+                <button class="btn btn-secondary" (click)="logout()">Logout</button>
+        </div>
+        
+    </div>
+</mat-dialog-content>

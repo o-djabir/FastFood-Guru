@@ -1,0 +1,71 @@
+<div *ngIf="isLoggedin; else signupForm">
+    <div>
+        <button class="btn btn-outline-secondary" (click)="openDialog()">{{info.username}}</button>
+    </div>
+</div>
+
+
+<ng-template #signupForm>
+    <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#registerModal">Sign Up</button>
+    <div class="modal fade" role="dialog" id="registerModal">
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Register</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="name">Your name</label>
+                            <input type="text" class="form-control" name="name" [(ngModel)]="form.name" #name="ngModel"
+                                required />
+                            <div *ngIf="f.submitted && name.invalid">
+                                <div *ngIf="name.errors.required">Name is required</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" name="username" [(ngModel)]="form.username"
+                                #username="ngModel" required />
+                            <div *ngIf="f.submitted && username.invalid">
+                                <div *ngIf="username.errors.required">Username is required</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" name="email" [(ngModel)]="form.email"
+                                #email="ngModel" required email />
+                            <div *ngIf="f.submitted && email.invalid">
+                                <div *ngIf="email.errors.required">Email is required</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" [(ngModel)]="form.password"
+                                #password="ngModel" />
+                            <div *ngIf="f.submitted && password.invalid">
+                                <div *ngIf="password.errors.required">Password is required</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <button class="btn btn-success" type="submit">Register</button>
+                            <div *ngIf="f.submitted && isSignUpFailed" class="alert alert-danger">
+                                Signup failed: {{errorMessage}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</ng-template>

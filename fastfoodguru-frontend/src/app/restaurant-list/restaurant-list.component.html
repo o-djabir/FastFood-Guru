@@ -1,0 +1,27 @@
+<br>
+<div *ngFor="let restaurant of restaurants">
+    <div id="imgContainer">
+        <img id="restoImg" [src]="restaurant.logo" [alt]="restaurant.name">
+    </div>
+    <br>
+    <dl>
+        <li *ngFor="let review of restaurant.reviews">
+            <div style="padding-left: 10px;" class="rating">
+                <span><Strong>{{review.author}}</Strong></span>
+                <span style="padding-left: 15px;" *ngIf="review.grade > 0">★ </span>
+                <span *ngIf="review.grade > 1">★ </span>
+                <span *ngIf="review.grade > 2">★ </span>
+                <span *ngIf="review.grade > 3">★ </span>
+                <span *ngIf="review.grade > 4">★ </span>
+            </div>
+            <br><br>
+            <p style="padding-left: 30px; font-family: Georgia, 'Times New Roman', Times, serif;">{{review.content}}</p>
+            <hr>
+        </li>
+    </dl>
+</div>
+<p style="text-align: center;" class="lead"><strong>Submit your own review</strong></p>
+
+<div>
+    <app-submit-review></app-submit-review>
+</div>
