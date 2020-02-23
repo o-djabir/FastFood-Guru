@@ -11,6 +11,7 @@ The backend is an API built with Spring Boot, and Maven as the build tool. The d
 The frontend was built with HTML, CSS, Bootstrap, and AngularJS as the chosen Javascript library.
 
 Challenges: Implementing the authentication system in the backend as well as the frontend, learning AngularJS
+
 Tutorials used (few of many):
 - https://www.romaniancoder.com/initialize-a-relational-database-in-spring-boot/
 - https://www.callicoder.com/series/spring-security-react/
