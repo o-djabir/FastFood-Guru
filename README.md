@@ -16,5 +16,6 @@ Tutorials used (few of many):
 - https://www.romaniancoder.com/initialize-a-relational-database-in-spring-boot/
 - https://www.callicoder.com/series/spring-security-react/
 - https://grokonez.com/java-integration/angular-spring-boot-jwt-authentication-example-angular-6-spring-security-mysql-full-stack-part-3-build-frontend
+
 ![Capture d’écran de 2020-02-23 21-24-53](https://user-images.githubusercontent.com/34792146/75119493-8af15e00-5683-11ea-974e-8452550e6564.png)
 
