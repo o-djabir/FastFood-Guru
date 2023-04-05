@@ -8,9 +8,9 @@ The application lets a user search for (with TypeAhead), read and write funny re
 
 The backend is an API built with Spring Boot, and Maven as the build tool. The database was created with MySQL, and then connected to the Spring Boot application. This RESTful API is also secured with JSON Web Tokens, using Spring Security.
 
-The frontend was built with HTML, CSS, Bootstrap, and AngularJS as the chosen Javascript library.
+The frontend was built with HTML, CSS, Bootstrap, and Angular as the chosen Javascript library.
 
-Challenges: Implementing the authentication system in the backend as well as the frontend, learning AngularJS
+Challenges: Implementing the authentication system in the backend as well as the frontend, learning Angular
 
 Tutorials used (few of many):
 - https://www.romaniancoder.com/initialize-a-relational-database-in-spring-boot/
